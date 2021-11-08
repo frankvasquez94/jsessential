@@ -11,5 +11,32 @@
 </head>
 <body>
     <h1>Js essential</h1>
+    <p>Este es un parrafo de ejemplo</p>
+    <hr>
+    <p>Este es un parrafo de ejemplo 2</p>
+
+    <button id="boton">Click me</button>
 </body>
 </html>
+
+<script>
+
+     // Document Object Model (DOM)
+     // Accedemos a traves de document, contiene todas las etiquetas html
+     // Es el puente entre html y javascript
+
+     boton = document.getElementById("boton");
+
+     boton.addEventListener('click', function(){
+          // Browser Object Model (BOM)
+          // Es el contenedor del document
+          // lo accesdemos a traves de windows
+
+          // Mostramos la ubicacion del archivo.
+          alert(window.location.href)
+
+          // Redirigimos
+          window.location.href = "https://golangbyexample.com/strategy-design-pattern-golang/";
+
+     });
+</script>
