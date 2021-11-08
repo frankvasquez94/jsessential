@@ -45,3 +45,12 @@ console.log(`El platillo ${menu[numPlatillo].nombre} esta en la posicion ${numPl
 var subMenu = menu.filter(platillo => platillo.pais == "Mexico");
 console.log("========Filter=========");
 console.log(subMenu);
+
+
+// Some and Every, condicionales or e and
+
+console.log("======consiconales some(or) y every(and)=============")
+var some = menu.some(platillo => platillo.precio < 10.50);
+console.log(`Hay platillos menores que 10.50? ${some}`);
+var every = menu.every(platillo => platillo.precio < 10.50);
+console.log(`Todos los platillos cuestan menos que 10.50? ${every}`);
