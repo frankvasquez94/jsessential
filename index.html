@@ -17,6 +17,7 @@
 
     <button id="boton">Click me</button>
     <button id="boton1">Click DOM example</button>
+    <button id="boton2">Click BOM example</button>
 
 </body>
 </html>
@@ -55,6 +56,30 @@
 
           // Accediendo al contenido de un elemento
           console.log(elementosPorClase[0].textContent)
+
+
+     });
+
+
+     boton2 = document.getElementById("boton2");   
+     
+     boton2.addEventListener('click', function(){
+          console.log("==============Elementos BOM================s");   
+          localStorage.setItem("contenido", "Contenido almacenado en el local storage");
+          let contenido = localStorage.getItem("contenido");
+          
+          // Accediendo al contenido de un elemento
+          //cambiamos el parrafo
+          parrafo = elementosPorClase[0];
+          parrafo.innerHTML = contenido;
+          console.log(contenido);
+
+          // Metodos importantes para navegar
+          // Pagina siguiente
+          //window.history.forward
+
+          // Pagina anterior
+          //window.history.back
 
 
      });
