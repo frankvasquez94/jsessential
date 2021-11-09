@@ -11,11 +11,13 @@
 </head>
 <body>
     <h1>Js essential</h1>
-    <p>Este es un parrafo de ejemplo</p>
+    <p class="principal">Este es un parrafo de ejemplo </p>
     <hr>
     <p>Este es un parrafo de ejemplo 2</p>
 
     <button id="boton">Click me</button>
+    <button id="boton1">Click DOM example</button>
+
 </body>
 </html>
 
@@ -37,6 +39,23 @@
 
           // Redirigimos
           window.location.href = "https://golangbyexample.com/strategy-design-pattern-golang/";
+
+     });
+
+
+     boton1 = document.getElementById("boton1");
+
+     // Obetnemos todos los elementos por tag
+     parrafos = document.getElementsByTagName("p");
+     elementosPorClase = document.getElementsByClassName("principal");
+     boton1.addEventListener('click', function(){
+          console.log("==============Elemtos por tag================s");          
+          console.log(parrafos);
+          
+
+          // Accediendo al contenido de un elemento
+          console.log(elementosPorClase[0].textContent)
+
 
      });
 </script>
