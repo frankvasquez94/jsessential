@@ -8,8 +8,8 @@ class Pantalla{
     }
 
     // Agregando mas propiedades
-    set peso(kg){
-        this.kg = kg;
+    set peso(value){
+        this.kg = value.trim();
     }
 
     get peso(){
