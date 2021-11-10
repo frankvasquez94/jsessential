@@ -4,3 +4,12 @@ img {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.errores {
+    background-color: sandybrown;
+    color: red;    
+    height: 30px;    
+}
+.hide {
+    display: none;
+}

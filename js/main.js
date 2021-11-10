@@ -3,12 +3,10 @@
 var contenedor = document.getElementById("contenedor");
 var banderas = document.getElementById("banderas");
 var boton = document.getElementById("boton");
+var mensajes = document.getElementById("mensajes");
 
 var posts = null;
 var paises = null;
-boton.addEventListener('click', function(){
-
-});
 
 boton.addEventListener('click', function(){
     getPosts().then(data => data.json()).then(data => {
@@ -20,6 +18,10 @@ boton.addEventListener('click', function(){
     }).then(data => data.json()).then(data => {
         paises = data;
         mostrarBanderas(paises);
+    }).catch(error => {
+        mensajes.classList.toggle('hide');
+        mensajes.innerHTML = error;
+        setTimeout(()=> mensajes.classList.toggle('hide'), 6000);
     });
 });
 
