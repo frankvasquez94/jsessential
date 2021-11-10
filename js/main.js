@@ -14,6 +14,8 @@ var num2 = 20;
 
 try {
 
+    // Para breakpoint en el codigo
+    //debugger;
     if(num1 > num2) {
         console.log(`Numero ${num1} es mayor que ${num2}`);        
     }else{
